@@ -1,0 +1,119 @@
+Multi_Tools Folder - Tools Overview
+
+
+--------------------------------------------------------------------------------
+File: product_rec_tools.py
+
+- explore_options
+  - Shows 5 random products from each specified sub-category.
+  - Returns product details in JSON format.
+
+- explore_options_with_price
+  - Finds products in given sub-categories within a specified price range.
+  - Can return top 3 most or least expensive products per sub-category.
+  - Returns product details as a DataFrame or JSON.
+
+- retrieve_with_prd_id
+  - Retrieves product information for a list of product IDs.
+  - Returns product details in JSON format.
+
+- retrieve_with_pincode
+  - Retrieves products available from sellers at a specific pincode.
+  - Returns product details in JSON format.
+
+--------------------------------------------------------------------------------
+File: order_processing_tools.py
+
+- calculate_distance
+  - Calculates the geographical distance (in km) between two pincodes using latitude and longitude.
+
+- calculate_delivery_charge
+  - Calculates delivery charges based on distance and delivery speed (standard, express, same_day, instant).
+  - Applies minimum charges for each delivery speed.
+
+- calculate_delivery_time
+  - Estimates delivery date and time based on selected delivery speed.
+
+- calculate_total_price
+  - Calculates the total price for a list of products and quantities, including delivery charges.
+
+- generate_order_id
+  - Generates a unique order ID for new orders.
+
+- save_delivery_data
+  - Saves order and delivery details to a CSV file.
+  - Records all relevant order information including products, quantities, delivery info, and remarks.
+
+--------------------------------------------------------------------------------
+File: support_tools.py
+
+- get_order_details
+  - Retrieves all order details for a given order ID from a CSV file.
+  - Returns the details in JSON format.
+
+- modify_order_quantities
+  - Updates the quantity of specific products in an order.
+  - Recalculates and updates the total order value.
+  - Saves changes to the CSV file.
+
+- cancel_order
+  - Cancels an order by setting its delivery status to "Canceled" in the CSV file.
+
+- TavilySearchResults (tavily_tool)
+  - Provides web search results using the Tavily API.
+  - Returns up to 5 search results for a given query.
+
+--------------------------------------------------------------------------------
+
+- TavilySearchResults (tavily_tool)
+  - Provides web search results using the Tavily API.
+  - Returns up to 5 search results for a given query.
+  - Supports integration with various front-end components to display brief result summaries.
+  - Includes mechanisms to handle API response errors and rate limits.
+
+- OpenCageGeocoder (opencage_tool)
+  - Leverages the OpenCage API for forward and reverse geocoding.
+  - Converts addresses to geographic coordinates and vice versa.
+  - Supports multiple languages and regional data for localization.
+  - Ideal for mapping applications and location-based services.
+  - Includes error handling for ambiguous queries and API limitations.
+
+--------------------------------------------------------------------------------
+
+APIs Explanation:
+
+Tavily API:
+This API generates concise search results by processing a given query and returning up to 5 brief search summaries. It is capable of efficiently handling various search requests, with built-in functionalities for error management and rate limiting to ensure reliable performance.
+
+OpenCage API:
+This API produces geographic data by converting addresses to coordinates (forward geocoding) and coordinates to addresses (reverse geocoding). It supports multiple languages and regional data, enabling effective location-based services. Additionally, it is equipped to manage ambiguous queries with robust error handling, ensuring accurate and reliable geocoding information.
+
+--------------------------------------------------------------------------------
+LangChain Tool Structuring and Working Standards
+--------------------------------------------------------------------------------
+
+A LangChain "tool" is a modular, callable Python function decorated with `@tool` from `langchain_core.tools`. Tools are the building blocks for agent reasoning and action, enabling agents to perform specific tasks such as data retrieval, calculations, or API calls.
+
+## Standard Structure of a LangChain Tool:
+- Decorator Usage:  
+  The `@tool` decorator registers the function as a tool, optionally with a custom name and description for discoverability and documentation.
+- Function Signature:  
+  Clearly defined parameters with type hints. The function should accept only the arguments needed for its task.
+- Docstring:  
+  Comprehensive docstrings describe the tool's purpose, input parameters, return value, and any special behavior. This is used by LangChain for documentation and agent self-reflection.
+- Implementation:  
+  The function implements the core logic, handles errors gracefully, and returns structured, serializable output (commonly JSON or string).
+- Return Value:  
+  The output should be easily interpretable by the agent and suitable for downstream processing.
+
+## Best Practices:
+- Use descriptive names and docstrings for clarity.
+- Always use type hints for parameters and return values.
+- Anticipate invalid input and return clear error messages.
+- Ensure outputs are JSON-serializable or in a format the agent can parse.
+- Each tool should perform a single, well-defined task.
+- Keep docstrings up to date as the tool evolves.
+
+
+
+

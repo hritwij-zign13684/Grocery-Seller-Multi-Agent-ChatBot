@@ -1,0 +1,58 @@
+order_id,user_id,product_id,quantity,product_name,order_date,delivery_speed,distance_km,delivery_charge,estimated_delivery_date,seller_pincode,buyer_pincode,delivery_status,total_order_value,remarks
+12345,1,471,-1,Product 471,2024-03-20 10:37,standard,0.0,50.0,2025-04-04 10:37:27,415002,415002,Canceled,0.5,Standard delivery
+12345,1,471,2,Product 471,2024-03-20 10:30:00,standard,0.0,50.0,2025-04-04 11:02:15,415002,415002,Processing,220.95,Standard delivery
+12345,1,187,1,Product 187,2024-03-20 10:30:00,standard,0.0,50.0,2025-04-04 11:02:15,415002,415002,Processing,220.95,Standard delivery
+12345,1,186,2,Product 186,2024-03-20 10:30:00,standard,0.0,50.0,2025-04-04 11:02:15,415002,415002,Processing,220.95,Standard delivery
+12345,67890,40,1,Kirkland Signature Bottled Water,2024-04-03 10:58:17,standard,5514.36,27571.8,2025-04-10 10:58:17,400001,411057,Processing,28265.75,Standard delivery order
+12345,67890,27,2,Ferrara's Bakery Cannolis,2024-04-03 10:58:17,standard,5514.36,27571.8,2025-04-10 10:58:17,400001,411057,Processing,28265.75,Standard delivery order
+12345,67890,1666,2,Kirkland Signature Organic Whole Cashews,2024-04-03 10:58:17,standard,5514.36,27571.8,2025-04-10 10:58:17,400001,411057,Processing,28265.75,Standard delivery order
+12345,1,40,1,Kirkland Signature Bottled Water,2024-03-20 10:30:00,standard,0.0,50.0,2025-04-10 11:03:38,411057,411057,Processing,743.95,Standard delivery order
+12345,1,27,2,Ferrara's Bakery Cannolis,2024-03-20 10:30:00,standard,0.0,50.0,2025-04-10 11:03:38,411057,411057,Processing,743.95,Standard delivery order
+12345,1,1666,2,Kirkland Signature Organic Whole Cashews,2024-03-20 10:30:00,standard,0.0,50.0,2025-04-10 11:03:38,411057,411057,Processing,743.95,Standard delivery order
+7303774,415302,1417,1,Product 1417,2024-04-04 10:30:00,express,588.14,5881.4,2025-04-07 17:59:28,560001,415302,Processing,6183.35,Express delivery of 4 different products
+7303774,415302,1523,2,Product 1523,2024-04-04 10:30:00,express,588.14,5881.4,2025-04-07 17:59:28,560001,415302,Processing,6183.35,Express delivery of 4 different products
+7303774,415302,1565,1,Product 1565,2024-04-04 10:30:00,express,588.14,5881.4,2025-04-07 17:59:28,560001,415302,Processing,6183.35,Express delivery of 4 different products
+7303774,415302,1631,1,Product 1631,2024-04-04 10:30:00,express,588.14,5881.4,2025-04-07 17:59:28,560001,415302,Processing,6183.35,Express delivery of 4 different products
+514,1234,101,1,Fresh Salmon Fillet,2024-04-20 10:00:00,standard,2.49,50.0,2025-04-21 14:33:28,400001,400002,Processing,124.46,Preliminary order processing
+514,1234,202,2,Imported Italian Pasta Collection,2024-04-20 10:00:00,standard,2.49,50.0,2025-04-21 14:33:28,400001,400002,Processing,124.46,Preliminary order processing
+514,1234,303,1,Exotic Seafood Platter,2024-04-20 10:00:00,standard,2.49,50.0,2025-04-21 14:33:28,400001,400002,Processing,124.46,Preliminary order processing
+638,1234,101,1,Fresh Salmon Fillet,2024-04-14 10:00:00,standard,10.0,50.0,2025-04-21 14:33:57,400001,400002,Processing,174.46,Standard delivery of seafood and pasta items
+638,1234,202,2,Imported Italian Pasta Collection,2024-04-14 10:00:00,standard,10.0,50.0,2025-04-21 14:33:57,400001,400002,Processing,174.46,Standard delivery of seafood and pasta items
+638,1234,303,1,Exotic Seafood Platter,2024-04-14 10:00:00,standard,10.0,50.0,2025-04-21 14:33:57,400001,400002,Processing,174.46,Standard delivery of seafood and pasta items
+12345,1,1,2,Kirkland Signature Protein Bars,2024-04-15 10:46:01,standard,5.77,50.0,2025-04-22 10:46:01,411005,411001,Processing,633.91,Standard delivery order
+12345,1,2,1,Doritos Tortilla Chips,2024-04-15 10:46:01,standard,5.77,50.0,2025-04-22 10:46:01,411005,411001,Processing,633.91,Standard delivery order
+12345,1,3,2,Bon Appetit Banana Bread Slice,2024-04-15 10:46:01,standard,5.77,50.0,2025-04-22 10:46:01,411005,411001,Processing,633.91,Standard delivery order
+12345,1,4,1,WildRoot's Coastal Berry Trail Mix,2024-04-15 10:46:01,standard,5.77,50.0,2025-04-22 10:46:01,411005,411001,Processing,633.91,Standard delivery order
+12345,1,5,2,Kirkland Signature Green Tea Bags,2024-04-15 10:46:01,standard,5.77,50.0,2025-04-22 10:46:01,411005,411001,Processing,633.91,Standard delivery order
+12345,1,6,1,Alani Nu Energy Drink Variety Pack,2024-04-15 10:46:01,standard,5.77,50.0,2025-04-22 10:46:01,411005,411001,Processing,633.91,Standard delivery order
+767711,12345,1,1,Kirkland Signature Variety Snack Box,2024-04-15 10:51:18,express,20.46,204.6,2025-04-18 10:51:18,411005,411057,Processing,551.55,Express delivery of snack items
+767711,12345,2,1,Clif Bar Variety Pack,2024-04-15 10:51:18,express,20.46,204.6,2025-04-18 10:51:18,411005,411057,Processing,551.55,Express delivery of snack items
+767711,12345,3,2,Second Nature Trail Mix,2024-04-15 10:51:18,express,20.46,204.6,2025-04-18 10:51:18,411005,411057,Processing,551.55,Express delivery of snack items
+767711,12345,4,1,Nutella & GO! Hazelnut Spread,2024-04-15 10:51:18,express,20.46,204.6,2025-04-18 10:51:18,411005,411057,Processing,551.55,Express delivery of snack items
+92609,1,1,1,Kirkland Signature Variety Snack Box,2024-04-15 10:52:04,express,20.46,204.6,2025-04-18 10:52:04,411005,411057,Processing,551.55,Express delivery of snack items
+92609,1,2,1,Clif Bar Variety Pack,2024-04-15 10:52:04,express,20.46,204.6,2025-04-18 10:52:04,411005,411057,Processing,551.55,Express delivery of snack items
+92609,1,3,2,Second Nature Trail Mix,2024-04-15 10:52:04,express,20.46,204.6,2025-04-18 10:52:04,411005,411057,Processing,551.55,Express delivery of snack items
+92609,1,4,1,Nutella & GO! Hazelnut Spread,2024-04-15 10:52:04,express,20.46,204.6,2025-04-18 10:52:04,411005,411057,Processing,551.55,Express delivery of snack items
+2,1,43,2,Kirkland Signature Organic Chocolate Milk,2024-04-15 10:30:00,same_day,0.0,150.0,2025-04-16 11:39:00,411057,411057,Processing,343.94,Same-day delivery in Pune
+2,1,1718,1,Around the World Spicy Nuts,2024-04-15 10:30:00,same_day,0.0,150.0,2025-04-16 11:39:00,411057,411057,Processing,343.94,Same-day delivery in Pune
+2,1,9,3,David's Cookies Brownie and Cookie Combo Pack,2024-04-15 10:30:00,same_day,0.0,150.0,2025-04-16 11:39:00,411057,411057,Processing,343.94,Same-day delivery in Pune
+935eb6ca-19c8-11f0-bc77-0068ebe080d0,12345,1,2,Red Bull Energy Drink,2024-04-22 10:30:00,standard,2414.74,36211.15,2025-04-22 12:39:26,560001,400001,Processing,36575.1,Multi-seller order with standard delivery
+935eb6ca-19c8-11f0-bc77-0068ebe080d0,12345,2,1,St Michel Madeleine French Sponge Cake,2024-04-22 10:30:00,standard,2414.74,36211.15,2025-04-22 12:39:26,560001,400001,Processing,36575.1,Multi-seller order with standard delivery
+935eb6ca-19c8-11f0-bc77-0068ebe080d0,12345,3,2,Wheat Thins Whole Grain Crackers,2024-04-22 10:30:00,standard,2414.74,36211.15,2025-04-22 12:39:26,560001,400001,Processing,36575.1,Multi-seller order with standard delivery
+5a3c5be0-1eae-11f0-99a2-0068ebe080d0,1,529,1,Product 529,2024-04-21 12:00:00,standard,15.96,79.8,2025-04-28 18:14:19,411001,411057,Processing,157.77,Standard delivery
+5a3c5be0-1eae-11f0-99a2-0068ebe080d0,1,473,2,Product 473,2024-04-21 12:00:00,standard,15.96,79.8,2025-04-28 18:14:19,411001,411057,Processing,157.77,Standard delivery
+c034e8c3-1eae-11f0-9083-0068ebe080d0,1,529,2,Product 529,2024-04-21 12:00:00,standard,15.96,79.8,2025-04-28 18:17:10,411001,411057,Processing,197.76,Standard delivery
+c034e8c3-1eae-11f0-9083-0068ebe080d0,1,473,2,Product 473,2024-04-21 12:00:00,standard,15.96,79.8,2025-04-28 18:17:10,411001,411057,Processing,197.76,Standard delivery
+15861b5f-1f3e-11f0-ad1e-0068ebe080d0,0,507,2,Product 507,2024-04-22 14:23:17,instant,0.0,250.0,2025-04-22 14:23:17,411057,411057,Processing,464.95,Instant delivery order
+15861b5f-1f3e-11f0-ad1e-0068ebe080d0,0,491,3,Product 491,2024-04-22 14:23:17,instant,0.0,250.0,2025-04-22 14:23:17,411057,411057,Processing,464.95,Instant delivery order
+9e4d2d9a-2be5-11f0-b814-0068ebe080d0,411033,183,3,Product 183,2024-05-11 13:52:40,express,1181.23,11812.3,2025-05-11 13:52:40,110025,411033,Processing,11877.35,Order contains 2 different products from 2 sellers
+9e4d2d9a-2be5-11f0-b814-0068ebe080d0,411033,46,2,Product 46,2024-05-11 13:52:40,express,1181.23,11812.3,2025-05-11 13:52:40,110025,411033,Processing,11877.35,Order contains 2 different products from 2 sellers
+5c7278ae-2be9-11f0-8c0a-0068ebe080d0,1,200,2,Product 200,2024-05-14 10:00:00,standard,123.7,618.5,2025-05-15 14:19:45,400001,411005,Processing,706.95,Standard delivery order
+5c7278ae-2be9-11f0-8c0a-0068ebe080d0,1,1519,1,Product 1519,2024-05-14 10:00:00,standard,123.7,618.5,2025-05-15 14:19:45,400001,411005,Processing,706.95,Standard delivery order
+5c7278ae-2be9-11f0-8c0a-0068ebe080d0,1,37,2,Product 37,2024-05-14 10:00:00,standard,123.7,618.5,2025-05-15 14:19:45,400001,411005,Processing,706.95,Standard delivery order
+5c7278ae-2be9-11f0-8c0a-0068ebe080d0,0,200,2,Product 200,2024-05-14 14:21:50,standard,123.7,618.5,2025-05-15 14:21:50,400001,411005,Processing,706.95,Standard delivery order
+5c7278ae-2be9-11f0-8c0a-0068ebe080d0,0,1519,1,Product 1519,2024-05-14 14:21:50,standard,123.7,618.5,2025-05-15 14:21:50,400001,411005,Processing,706.95,Standard delivery order
+5c7278ae-2be9-11f0-8c0a-0068ebe080d0,0,37,2,Product 37,2024-05-14 14:21:50,standard,123.7,618.5,2025-05-15 14:21:50,400001,411005,Processing,706.95,Standard delivery order
+f3aa3cc6-2be9-11f0-b5fc-0068ebe080d0,12345,200,2,Product 200,2024-05-14 10:30:00,standard,4391.28,21956.4,2025-05-15 14:23:47,410038,411033,Processing,22044.85,Standard delivery order
+f3aa3cc6-2be9-11f0-b5fc-0068ebe080d0,12345,1519,1,Product 1519,2024-05-14 10:30:00,standard,4391.28,21956.4,2025-05-15 14:23:47,410038,411033,Processing,22044.85,Standard delivery order
+f3aa3cc6-2be9-11f0-b5fc-0068ebe080d0,12345,37,2,Product 37,2024-05-14 10:30:00,standard,4391.28,21956.4,2025-05-15 14:23:47,410038,411033,Processing,22044.85,Standard delivery order

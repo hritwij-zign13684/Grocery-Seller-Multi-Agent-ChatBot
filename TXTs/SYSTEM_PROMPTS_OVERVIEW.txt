@@ -1,0 +1,44 @@
+SYSTEM PROMPTS OVERVIEW
+
+--------------------------------------------------------------------------------
+File: System_Prompts/system_prompt_1_2.py
+
+- Purpose: System prompt for the Product Recommendation Agent.
+- Defines the agent's role as a grocery shopping product recommendation assistant.
+- Lists available data resources (categories, product IDs, seller pincodes).
+- Details available tools for searching, filtering, and retrieving product information.
+- Provides operational rules for recommendations and response formatting.
+- Emphasizes structured, complete JSON responses and unique product IDs.
+
+--------------------------------------------------------------------------------
+File: System_Prompts/system_prompt_2_2.py
+
+- Purpose: System prompt for the Order Processing Agent.
+- Defines the agent's role in calculating distances, delivery charges, times, and finalizing orders.
+- Lists available tools for each step of the order process.
+- Outlines a workflow sequence: data collection, calculations, and order finalization.
+- Provides operational guidelines for accuracy, efficiency, and professional communication.
+
+--------------------------------------------------------------------------------
+File: System_Prompts/system_prompt_3_2.py
+
+- Purpose: System prompt for the Support Agent.
+- Defines the agent's role in managing existing orders and retrieving information.
+- Lists available tools for order details, modifications, cancellations, and external search.
+- Provides operational guidelines for task completion, verification, and communication.
+- Emphasizes structured JSON responses and minimizing unnecessary exchanges.
+
+--------------------------------------------------------------------------------
+File: System_Prompts/super_agent_sys_prompt_2.py
+
+- Purpose: System prompt for the Super Agent (main customer-facing assistant).
+- Defines the agent's role in guiding customers through product discovery, order placement, and support.
+- Lists core rules for product IDs, pricing, and delivery.
+- Describes available locations, delivery options, and product categories.
+- Details the roles and input/output of each sub-agent (Product Recommendation, Order Processing, Support).
+- Outlines the full customer workflow from greeting to order confirmation.
+- Includes reminders to keep internal workflow and agent details hidden from customers.
+
+--------------------------------------------------------------------------------
+
+Each system prompt sets the behavior, workflow, and tool usage for its respective agent, ensuring clear, consistent, and professional interactions.

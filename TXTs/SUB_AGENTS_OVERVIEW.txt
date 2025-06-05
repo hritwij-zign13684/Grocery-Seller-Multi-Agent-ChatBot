@@ -1,0 +1,95 @@
+ALL SUB AGENTS OVERVIEW
+
+
+File: Seperate_Agents/product_rec_agent.py
+
+- Purpose: Implements an agent for product recommendation tasks.
+- Loads product recommendation tools from Multi_Tools.
+- Uses a system prompt for product recommendations.
+- Sets up a LangGraph state machine with nodes for chatbot and tool execution.
+- Handles tool calls and agent memory.
+
+--------------------------------------------------------------------------------
+File: Seperate_Agents/order_processing_agent.py
+
+- Purpose: Implements an agent for order processing tasks.
+- Loads order processing tools from Multi_Tools.
+- Uses a system prompt for order processing.
+- Sets up a LangGraph state machine with chatbot and tool nodes.
+- Handles tool calls and agent memory.
+
+--------------------------------------------------------------------------------
+File: Seperate_Agents/support_agent.py
+
+- Purpose: Implements an agent for customer support tasks.
+- Loads support tools from Multi_Tools.
+- Uses a system prompt for support.
+- Sets up a LangGraph state machine with chatbot and tool nodes.
+- Handles tool calls and agent memory.
+
+--------------------------------------------------------------------------------
+Standard Way of Creating a Sub-Agent Graph (with reference to the provided files)
+
+# Overview:
+A sub-agent in this system is a modular conversational agent responsible for a specific domain (such as product recommendation, order processing, or support). Each sub-agent is implemented as a LangGraph state machine, which manages the flow of messages, tool calls, and agent memory.
+
+# Key Steps and Libraries:
+
+1. Import Required Libraries:
+   - langchain_core.messages: For structured message types (SystemMessage, HumanMessage, etc.).
+   - langchain_core.output_parsers: For parsing model outputs.
+   - langchain_aws.ChatBedrock: For interfacing with AWS Bedrock LLMs.
+   - langgraph.graph, langgraph.checkpoint.memory: For building and managing the state graph and memory.
+   - langchain_core.prompts: For system prompts and templates.
+   - typing, typing_extensions: For type annotations and TypedDicts.
+   - Multi_Tools.<tool_file>: For importing the relevant tools for the agent.
+   - System_Prompts.<prompt_file>: For importing the agent-specific system prompt.
+
+2. Define the LLM:
+   - Instantiate the Bedrock client and the ChatBedrock LLM with the desired model and parameters.
+   - Bind the agent's tools to the LLM using `.bind_tools()`.
+
+3. Define the Agent State:
+   - Use a TypedDict (e.g., `class State(TypedDict)`) to specify the structure of the agent's state, typically including a list of messages.
+
+4. Build the StateGraph:
+   - Create a StateGraph instance with the defined State.
+   - Define the main chatbot node, which:
+     - Prepends the system prompt to the message list.
+     - Invokes the LLM with the current state and returns the response.
+   - Add the chatbot node to the graph.
+
+5. Add Tool Node:
+   - Use `ToolNode` from langgraph.prebuilt to wrap the agent's tools.
+   - Add the tool node to the graph.
+
+6. Define Control Flow:
+   - Implement a function (e.g., `should_continue`) to decide whether to invoke tools or end the conversation, based on the latest message.
+   - Add conditional edges to the graph to control the flow between chatbot, tools, and END.
+
+7. Connect the Graph:
+   - Add edges between nodes to define the message flow (e.g., tools -> chatbot, START -> chatbot).
+
+8. Memory Management:
+   - Use `MemorySaver` to persist conversation state and enable checkpointing.
+
+9. Compile the Agent:
+   - Compile the graph with the memory checkpointer to produce the final agent instance (e.g., `order_processing_agent = graphbuilder.compile(checkpointer= memory)`).
+
+# Functionality Logic:
+- The agent receives user/system messages and processes them through the chatbot node.
+- If tool calls are detected in the message, the flow moves to the tool node, which executes the appropriate tool.
+- The result is returned to the chatbot node for further reasoning or response generation.
+- The process repeats until no further tool calls are needed, at which point the conversation ends.
+
+# Advantages:
+- Modularity: Each sub-agent is isolated and focused on a specific domain.
+- Extensibility: New tools or logic can be added without affecting other agents.
+- Robustness: State and memory management ensure reliable multi-turn interactions.
+- Clarity: The use of TypedDicts, type annotations, and structured prompts improves maintainability and readability.
+
+# Summary:
+This standard approach ensures that each sub-agent is a self-contained, stateful conversational agent, capable of handling complex workflows and tool integrations, while remaining easy to maintain and extend.
+
+
+

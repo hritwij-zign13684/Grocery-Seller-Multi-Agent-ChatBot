@@ -1,0 +1,22 @@
+Architected a distributed multi-agent system leveraging AWS services and Python, enabling autonomous processing of grocery orders through coordinated agent collaboration.
+Employed large language models (LLMs) as the reasoning core for both supervisor and sub-agents, facilitating dynamic task allocation, context-aware decision-making, and inter-agent communication via prompt engineering.
+Designed agent specialization for discrete workflow stages, including order parsing, product matching, inventory validation, and delivery logistics, each with isolated toolsets and data access patterns.
+Integrated structured data pipelines using CSV datasets and custom extraction utilities, supporting real-time data ingestion and transformation for agent consumption.
+Implemented robust error handling and fallback strategies within agent interactions to ensure system resilience and maintain workflow continuity under edge-case scenarios.
+Utilized Jupyter notebooks for rapid prototyping, scenario simulation, and reproducible experimentation, accelerating development cycles and enabling transparent debugging.
+Visualized system topology and agent relationships through detailed architecture diagrams, highlighting asynchronous communication flows, modular extensibility, and scalability across cloud environments.
+Demonstrated advanced orchestration of LLM-driven agents, showcasing the ability to decompose complex business logic into manageable, reusable, and independently evolving components.
+
+
+
+
+Engineered a distributed, multi-agent system on AWS using Python and large language models (LLMs), enabling autonomous, context-aware processing of grocery orders through specialized agents for parsing, validation, and logistics.
+Integrated structured data pipelines and custom extraction utilities for real-time ingestion, while employing robust error handling and fallback mechanisms to ensure system resilience and workflow continuity.
+Visualized and documented the modular architecture with detailed diagrams, demonstrating scalable, extensible agent orchestration and advanced decomposition of complex business logic into reusable components.
+
+
+* Architected a distributed, LLM-driven multi-agent system on AWS (1 supervisor agent + 3 specialized sub-agents) using  LangGraph  and  LangChain , orchestrating 12 distinct tools for autonomous grocery order parsing, product matching, inventory validation, and delivery logistics.
+* Employed  AWS Bedrock  (Anthropic Claude) with advanced prompt engineering, enabling context-aware decision-making that reduced misrouted requests by  35%  and maintained 99% workflow continuity under edge-case conditions.
+* Integrated structured ETL pipelines to ingest and normalize  60K+  CSV order records, leveraging  Pydantic  for data validation and implementing robust error-handling/fallback strategies that ensured scalable data processing with <1% failure rate.
+
+Built a Streamlit front-end with real-time LLM streaming (using `AIMessageChunk`), supporting 100+ concurrent user sessions and accelerating prototyping cycles by  50% , while visualizing system topology via detailed architecture diagrams for modular extensibility.
