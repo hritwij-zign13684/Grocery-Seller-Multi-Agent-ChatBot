@@ -99,7 +99,10 @@ def product_recommendation_agent(state: Annotated[dict, InjectedState]) -> str:
 
     print("PRODUCT RECOMMENDATION NODE:")
     # print(f"Length of state messages: {len(state['messages'])}")
-    print(f"state: \n{state}\n\n")
+    # print(f"state: \n{state}\n\n")
+    for msg in state['messages']:
+        print(msg.name);print(type(msg))
+        print(msg.content);print();print()
     
     supervisor_conveted_msg = HumanMessage(content= str(state["messages"][-1].tool_calls[0]['args']), name="SUPERVISOR",id = state["messages"][-1].id)
     # state["messages"].append(supervisor_conveted_msg)
@@ -185,7 +188,12 @@ def order_processing_agent(state: Annotated[dict, InjectedState]) :
     All tools are designed to streamline order processing and delivery management, ensuring accurate calculations and data storage.
     """
     print("ORDER PROCESSING NODE:")
-    print(f"state: \n{state}\n\n")
+    # print(f"state: \n{state}\n\n")
+
+    for msg in state['messages']:
+        print(msg.name);print(type(msg))
+        print(msg.content);print();print()
+        
     supervisor_conveted_msg = HumanMessage(content= str(state["messages"][-1].tool_calls[0]['args']), name="SUPERVISOR",id = state["messages"][-1].id)
     print(f"Supervisor Message: {supervisor_conveted_msg.content}"); print()
     # state["messages"].append(supervisor_conveted_msg)

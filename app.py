@@ -108,7 +108,7 @@ for message_dict in st.session_state['message_history']:
     with st.chat_message(name= message_dict['role']):
         st.markdown(message_dict['content'])
 
-if prompt := st.chat_input("Bol na bhai..."):
+if prompt := st.chat_input("Write your query here"):
     # print(f"{prompt = }n")
 
     st.session_state['message_history'].append({'role': "user", "content" : prompt})
